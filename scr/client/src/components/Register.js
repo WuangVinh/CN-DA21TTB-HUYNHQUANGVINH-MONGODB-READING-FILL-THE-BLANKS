@@ -27,29 +27,41 @@ const useStyles = makeStyles((theme) => ({
 const Register = () => {
   const classes = useStyles();
   const history = useHistory();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  });
   const [error, setError] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Kiểm tra mật khẩu xác nhận
-    if (password !== confirmPassword) {
+    if (formData.password !== formData.confirmPassword) {
       setError('Passwords do not match');
       return;
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/register', {
-        email,
-        password
+      const response = await axios.post('http://localhost:5000/api/auth/register', {
+        username: formData.username,
+        email: formData.email,
+        password: formData.password
       });
 
-      if (response.data.message) {
+      if (response.data.success) {
         // Đăng ký thành công, chuyển đến trang đăng nhập
-        history.push('/login');
+        history.push('/login', { 
+          message: 'Registration successful! Please login.' 
+        });
       }
     } catch (error) {
       setError(error.response?.data?.message || 'Registration failed');
@@ -68,13 +80,21 @@ const Register = () => {
             margin="normal"
             required
             fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
+            name="username"
+            label="Username"
             autoFocus
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={formData.username}
+            onChange={handleChange}
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="email"
+            label="Email Address"
+            value={formData.email}
+            onChange={handleChange}
           />
           <TextField
             variant="outlined"
@@ -86,8 +106,8 @@ const Register = () => {
             type="password"
             id="password"
             autoComplete="new-password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={formData.password}
+            onChange={(e) => setFormData({ ...formData, password: e.target.value })}
           />
           <TextField
             variant="outlined"
@@ -98,8 +118,8 @@ const Register = () => {
             label="Confirm Password"
             type="password"
             id="confirmPassword"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
+            value={formData.confirmPassword}
+            onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
           />
           {error && (
             <Typography className={classes.error}>

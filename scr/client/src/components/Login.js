@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Container,
     Card,
@@ -7,13 +7,9 @@ import {
     Button,
     Typography,
     Box,
-    makeStyles,
-    CircularProgress,
-    Snackbar,
-    Divider,
-    Link,
+    makeStyles
 } from '@material-ui/core';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
@@ -33,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         gap: theme.spacing(3),
+        marginTop: theme.spacing(2)
     },
     submitButton: {
         marginTop: theme.spacing(2),
@@ -43,68 +40,62 @@ const useStyles = makeStyles((theme) => ({
             background: 'linear-gradient(45deg, #B7791F 30%, #D69E2E 90%)',
         },
     },
-    divider: {
-        margin: theme.spacing(3, 0),
+    successMessage: {
+        color: '#2F855A',
+        backgroundColor: '#F0FFF4',
+        padding: theme.spacing(2),
+        borderRadius: theme.spacing(1),
+        marginBottom: theme.spacing(2),
     },
-    registerSection: {
-        textAlign: 'center',
-        marginTop: theme.spacing(2),
-    },
-    registerLink: {
-        color: theme.palette.primary.main,
-        textDecoration: 'none',
-        fontWeight: 'bold',
-        '&:hover': {
-            textDecoration: 'underline',
-        },
-    },
+    errorMessage: {
+        color: '#C53030',
+        backgroundColor: '#FFF5F5',
+        padding: theme.spacing(2),
+        borderRadius: theme.spacing(1),
+        marginBottom: theme.spacing(2),
+    }
 }));
 
 const Login = () => {
     const classes = useStyles();
     const history = useHistory();
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
+    const location = useLocation();
     const [formData, setFormData] = useState({
         username: '',
         password: ''
     });
+    const [error, setError] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
+
+    useEffect(() => {
+        if (location.state?.message) {
+            setSuccessMessage(location.state.message);
+            history.replace({ ...location, state: {} });
+        }
+    }, [location, history]);
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true);
         setError('');
-
+        
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', {
-                username: formData.username,
-                password: formData.password
-            });
+            const response = await axios.post('http://localhost:5000/api/auth/login', formData);
 
             if (response.data.token) {
                 localStorage.setItem('token', response.data.token);
                 localStorage.setItem('user', JSON.stringify(response.data.user));
-                
-                history.push('/');
-            } else {
-                setError('Invalid response from server');
+                window.location.href = '/';
             }
         } catch (error) {
-            console.error('Login error:', error);
-            if (error.response) {
-                setError(error.response.data.message || 'Server error');
-            } else if (error.request) {
-                setError('No response from server. Please check your connection.');
-            } else {
-                setError('An error occurred: ' + error.message);
-            }
-        } finally {
-            setLoading(false);
+            setError(error.response?.data?.message || 'Login failed');
         }
-    };
-
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     return (
@@ -116,12 +107,31 @@ const Login = () => {
                             Login
                         </Typography>
                         
+                        {successMessage && (
+                            <Typography 
+                                className={classes.successMessage}
+                                onClick={() => setSuccessMessage('')}
+                            >
+                                {successMessage}
+                            </Typography>
+                        )}
+                        
+                        {error && (
+                            <Typography 
+                                className={classes.errorMessage}
+                                onClick={() => setError('')}
+                            >
+                                {error}
+                            </Typography>
+                        )}
+
                         <form onSubmit={handleSubmit} className={classes.form}>
                             <TextField
                                 name="username"
                                 label="Username"
                                 variant="outlined"
                                 required
+                                fullWidth
                                 value={formData.username}
                                 onChange={handleChange}
                             />
@@ -132,6 +142,7 @@ const Login = () => {
                                 type="password"
                                 variant="outlined"
                                 required
+                                fullWidth
                                 value={formData.password}
                                 onChange={handleChange}
                             />
@@ -139,29 +150,25 @@ const Login = () => {
                             <Button
                                 type="submit"
                                 variant="contained"
+                                fullWidth
                                 className={classes.submitButton}
-                                disabled={loading}
                             >
-                                {loading ? (
-                                    <CircularProgress size={24} color="inherit" />
-                                ) : (
-                                    'Login'
-                                )}
+                                Login
+                            </Button>
+
+                            <Button
+                                variant="text"
+                                fullWidth
+                                color="primary"
+                                onClick={() => history.push('/register')}
+                                style={{ marginTop: '1rem' }}
+                            >
+                                Don't have an account? Register
                             </Button>
                         </form>
                     </CardContent>
                 </Card>
             </Container>
-
-            <Snackbar 
-                open={!!error} 
-                autoHideDuration={6000} 
-                onClose={() => setError('')}
-            >
-                <Typography style={{ color: 'red', backgroundColor: 'white', padding: '10px' }}>
-                    {error}
-                </Typography>
-            </Snackbar>
         </Box>
     );
 };

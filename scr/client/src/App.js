@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import QuizList from './components/QuizList';
 import Quiz from './components/Quiz';
@@ -7,32 +7,31 @@ import Result from './components/Result';
 import Login from './components/Login';
 import Register from './components/Register';
 import Profile from './components/Profile';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
-    const history = useHistory();
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     useEffect(() => {
-        // Kiểm tra xem có redirect sau đăng nhập không
-        const redirectPath = localStorage.getItem('redirectAfterLogin');
-        if (redirectPath) {
-            // Xóa redirect path từ localStorage
-            localStorage.removeItem('redirectAfterLogin');
-            // Chuyển hướng đến trang được chỉ định
-            history.push(redirectPath);
+        const token = localStorage.getItem('token');
+        if (token) {
+            setIsAuthenticated(true);
         }
-    }, [history]);
+    }, []);
 
     return (
         <Router>
             <div className="App">
-                <Header />
+                <Header isAuthenticated={isAuthenticated} />
                 <Switch>
-                    <Route path="/login" component={Login} />
-                    <Route path="/" exact component={QuizList} />
-                    <Route path="/quiz/:id" component={Quiz} />
-                    <Route path="/result" component={Result} />
+                    <Route path="/login">
+                        <Login setIsAuthenticated={setIsAuthenticated} />
+                    </Route>
                     <Route path="/register" component={Register} />
-                    <Route path="/profile" component={Profile} />
+                    <Route path="/" exact component={QuizList} />
+                    <PrivateRoute path="/quiz/:id" component={Quiz} />
+                    <PrivateRoute path="/result" component={Result} />
+                    <PrivateRoute path="/profile" component={Profile} />
                 </Switch>
             </div>
         </Router>

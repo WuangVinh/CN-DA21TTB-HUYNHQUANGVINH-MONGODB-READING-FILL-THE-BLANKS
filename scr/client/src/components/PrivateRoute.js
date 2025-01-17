@@ -1,27 +1,26 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  const { token } = useAuth();
+    const isAuthenticated = localStorage.getItem('token') !== null;
 
-  return (
-    <Route
-      {...rest}
-      render={props =>
-        token ? (
-          <Component {...props} />
-        ) : (
-          <Redirect
-            to={{
-              pathname: "/login",
-              state: { from: props.location }
-            }}
-          />
-        )
-      }
-    />
-  );
+    return (
+        <Route
+            {...rest}
+            render={props =>
+                isAuthenticated ? (
+                    <Component {...props} />
+                ) : (
+                    <Redirect
+                        to={{
+                            pathname: "/login",
+                            state: { from: props.location, message: "Please login to take the quiz" }
+                        }}
+                    />
+                )
+            }
+        />
+    );
 };
 
 export default PrivateRoute;
