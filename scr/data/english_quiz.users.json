@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "675e3cf152f88132b7900b60"
+  },
+  "username": "Thịnh",
+  "email": "thinh@gmail.com",
+  "password": "$2a$10$rD/FpuXMXnEM1qHP1HW.ROCw2rUwKlCniiDxNBPp/K1CoEE2JGQiW",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "678a86965ad7808f86cff7f6"
+  },
+  "username": "vinh",
+  "email": "vvinh2905@gmail.com",
+  "password": "$2a$10$CqaBJJlfVHaCpR8uTHxYMOxy2kwAFKorHaIEzs2WcojjLVuRtqZSG",
+  "createdAt": {
+    "$date": "2025-01-17T16:34:30.258Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-17T16:34:30.258Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "678a892a5ad7808f86cffa3b"
+  },
+  "username": "kha",
+  "email": "khadt011@gmail.com",
+  "password": "$2a$10$j2u8HmWN15KIkdgYi7WtIOG2XPLTjC5Kt9Wtuqsimn81t.YDg6dlG",
+  "createdAt": {
+    "$date": "2025-01-17T16:45:30.526Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-17T16:45:30.526Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "678a93b7d244e8be82fe9130"
+  },
+  "username": "kien",
+  "email": "kien123@gmail.com",
+  "password": "$2a$10$dDJ7DdwCQeNYuJkURWDRteGe8xCMnp.OK44P7micng.W1JEyhrXWS",
+  "createdAt": {
+    "$date": "2025-01-17T17:30:31.791Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-17T17:30:31.791Z"
+  },
+  "__v": 0
+}]

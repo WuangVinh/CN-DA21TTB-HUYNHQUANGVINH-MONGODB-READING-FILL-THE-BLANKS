@@ -1,0 +1,558 @@
+[{
+  "_id": {
+    "$oid": "6751489d0b6463b0702033f4"
+  },
+  "question_id": 1,
+  "type": "fill_in_the_blanks",
+  "title": "Reading 1 - Social Reforms",
+  "question_text": "Social reforms are normally initiated as a result of ____ analyses of factors such as crime rates and poverty levels etc. Large-scale population can result from ____ devised by statisticians. Manufacturers can provide better products at lower costs by ____ statistical control tools, such as control charts. Diseases are controlled through analyses designed to ____ epidemics. Endangered species of fish and other wildlife are ____ through regulations and laws that react to statistical estimates of changing population sizes. ____ statistical analysis of fatality rates, legislators can better justify laws, such as those governing air pollution, auto inspections, seat belt and airbag use, and drunk driving.",
+  "blanks": [
+    {
+      "id": 1,
+      "options": [
+        "rational",
+        "process",
+        "statistical",
+        "structural"
+      ],
+      "correctAnswer": "statistical"
+    },
+    {
+      "id": 2,
+      "options": [
+        "inspections",
+        "projections",
+        "observation",
+        "evaluation"
+      ],
+      "correctAnswer": "projections"
+    },
+    {
+      "id": 3,
+      "options": [
+        "using",
+        "maintaining",
+        "retaining",
+        "convicting"
+      ],
+      "correctAnswer": "using"
+    },
+    {
+      "id": 4,
+      "options": [
+        "cure",
+        "practice",
+        "participate",
+        "anticipate"
+      ],
+      "correctAnswer": "anticipate"
+    },
+    {
+      "id": 5,
+      "options": [
+        "rescued",
+        "managed",
+        "protected",
+        "hunted"
+      ],
+      "correctAnswer": "protected"
+    },
+    {
+      "id": 6,
+      "options": [
+        "Even",
+        "Through",
+        "In spite of",
+        "Therefore"
+      ],
+      "correctAnswer": "Through"
+    },
+    {
+      "id": 7,
+      "options": [
+        "bcvc",
+        "bfhd",
+        "adad",
+        "ffdf"
+      ],
+      "correctAnswer": "ffdf"
+    }
+  ],
+  "difficulty": "medium",
+  "category": "reading_comprehension",
+  "points": 6
+},
+{
+  "_id": {
+    "$oid": "6751489d0b6463b0702033f5"
+  },
+  "question_id": 2,
+  "type": "fill_in_the_blanks",
+  "title": "Reading 2 - Workforce Planning",
+  "question_text": "The purpose of the workforce plan is to enable a business to achieve its overall objective by successfully putting its corporate strategies into ____. So it is these whole business objective and strategies that are the ____ point for assessing the number and type of staff of workers that will be needed in the future. Where growth is the objective, the business may be planning to increase sales by targeting new markets for ____ new products. The workforce plan will need to set out how the people required to make this happen will be recruited, retained, developed or relocated if cost minimization is the goal, and if workforce ____ is one of the strategies, plans will need to be in place to ____ productivity, cut wages bills or delays the organizational structure.",
+  "blanks": [
+    {
+      "id": 1,
+      "options": [
+        "action",
+        "business",
+        "order",
+        "bargain"
+      ],
+      "correctAnswer": "action"
+    },
+    {
+      "id": 2,
+      "options": [
+        "triggering",
+        "sensible",
+        "starting",
+        "objective"
+      ],
+      "correctAnswer": "starting"
+    },
+    {
+      "id": 3,
+      "options": [
+        "introducing",
+        "launching",
+        "producing",
+        "generating"
+      ],
+      "correctAnswer": "launching"
+    },
+    {
+      "id": 4,
+      "options": [
+        "deficiency",
+        "capacity",
+        "efficiency",
+        "capability"
+      ],
+      "correctAnswer": "efficiency"
+    },
+    {
+      "id": 5,
+      "options": [
+        "decrease",
+        "develop",
+        "launch",
+        "boost"
+      ],
+      "correctAnswer": "boost"
+    }
+  ],
+  "difficulty": "medium",
+  "category": "business_management",
+  "points": 5
+},
+{
+  "_id": {
+    "$oid": "6751489d0b6463b0702033f6"
+  },
+  "question_id": 3,
+  "type": "fill_in_the_blanks",
+  "title": "Reading 3 - Technology Education",
+  "question_text": "Professor Richard Kimbell directed the DES funded Assessment of Performance Unit research project in Design and Technology. In 1990 he ____ the Technology Education Research Unit (TERU) at Goldsmiths College, University of London, which is now running a wide range of funded research projects in design and technology and IT. He has published widely in the field, including reports ____ by the Congress of the United States, UNESCO and NATO; he has written and presented television programs and regularly lectures internationally. His latest book Assessing Technology: International Trends in Curriculum and Assessment won the international technology education book of the year award from the Council for Technology Teacher Education at ITEA in 1999 in Minneapolis, USA. Kay Stables is Reader in Design and Technology Education and former Head of the Design Department at Goldsmiths College, University of London. She started her career as a textiles teacher, moving to Goldsmiths as a ____ of the APU D&T research team. From 1990–1992, she was Project Director for the Key Stage 1 Technology SAT developments and ____ this as Research Associate on the Understanding Technological Approaches project which built case studies of D&T work from children aged 5–16. Most recently she has conducted, with Richard Kimbell, an evaluation of the ____ of a technology education initiative in South Africa and is currently researching into the use of handling collections in developing D&T ____ and literacy.",
+  "blanks": [
+    {
+      "id": 1,
+      "options": [
+        "announced",
+        "introduced",
+        "founded",
+        "followed"
+      ],
+      "correctAnswer": "founded"
+    },
+    {
+      "id": 2,
+      "options": [
+        "challenge",
+        "commissioned",
+        "correlated",
+        "supplement"
+      ],
+      "correctAnswer": "commissioned"
+    },
+    {
+      "id": 3,
+      "options": [
+        "form",
+        "alternative",
+        "nature",
+        "part"
+      ],
+      "correctAnswer": "part"
+    },
+    {
+      "id": 4,
+      "options": [
+        "improved",
+        "followed",
+        "started",
+        "advanced"
+      ],
+      "correctAnswer": "followed"
+    },
+    {
+      "id": 5,
+      "options": [
+        "benefits",
+        "advances",
+        "impact",
+        "difficulty"
+      ],
+      "correctAnswer": "impact"
+    },
+    {
+      "id": 6,
+      "options": [
+        "leading",
+        "reliability",
+        "evolutionary",
+        "capability"
+      ],
+      "correctAnswer": "capability"
+    }
+  ],
+  "difficulty": "hard",
+  "category": "education_technology",
+  "points": 6
+},
+{
+  "_id": "6751489d0b6463b0702033fb",
+  "question_id": 8,
+  "type": "fill_in_the_blanks",
+  "title": "Reading 4 - Artificial Intelligence in Business",
+  "question_text": "Artificial Intelligence is rapidly ____ the way businesses operate. Companies are ____ to implement AI solutions to ____ their efficiency and ____ competitive advantage. Machine learning algorithms are ____ vast amounts of data to ____ customer behavior and ____ market trends. While some workers ____ about job displacement, experts ____ that AI will create new opportunities. However, businesses must ____ carefully to ensure ethical implementation.",
+  "blanks": [
+    {
+      "id": 1,
+      "options": [
+        "transforming",
+        "changing",
+        "modifying",
+        "altering"
+      ],
+      "correctAnswer": "transforming"
+    },
+    {
+      "id": 2,
+      "options": [
+        "rushing",
+        "hesitating",
+        "preparing",
+        "planning"
+      ],
+      "correctAnswer": "rushing"
+    },
+    {
+      "id": 3,
+      "options": [
+        "improve",
+        "reduce",
+        "maintain",
+        "monitor"
+      ],
+      "correctAnswer": "improve"
+    },
+    {
+      "id": 4,
+      "options": [
+        "gain",
+        "lose",
+        "maintain",
+        "achieve"
+      ],
+      "correctAnswer": "gain"
+    },
+    {
+      "id": 5,
+      "options": [
+        "analyzing",
+        "collecting",
+        "storing",
+        "processing"
+      ],
+      "correctAnswer": "analyzing"
+    },
+    {
+      "id": 6,
+      "options": [
+        "understand",
+        "predict",
+        "monitor",
+        "track"
+      ],
+      "correctAnswer": "predict"
+    },
+    {
+      "id": 7,
+      "options": [
+        "forecast",
+        "ignore",
+        "follow",
+        "analyze"
+      ],
+      "correctAnswer": "forecast"
+    },
+    {
+      "id": 8,
+      "options": [
+        "worry",
+        "celebrate",
+        "think",
+        "wonder"
+      ],
+      "correctAnswer": "worry"
+    },
+    {
+      "id": 9,
+      "options": [
+        "believe",
+        "doubt",
+        "suggest",
+        "argue"
+      ],
+      "correctAnswer": "believe"
+    },
+    {
+      "id": 10,
+      "options": [
+        "proceed",
+        "rush",
+        "wait",
+        "delay"
+      ],
+      "correctAnswer": "proceed"
+    }
+  ],
+  "difficulty": "hard",
+  "category": "business_technology",
+  "points": 10
+},
+{
+  "_id": "6751489d0b6463b0702033fc",
+  "question_id": 9,
+  "type": "fill_in_the_blanks",
+  "title": "Reading 5 - Climate Change Solutions",
+  "question_text": "Scientists are ____ new solutions to ____ climate change. Renewable energy technologies are ____ rapidly, helping to ____ carbon emissions. Communities worldwide are ____ sustainable practices to ____ their environmental impact. Researchers ____ that immediate action is ____ to prevent irreversible damage. Governments are ____ stricter regulations, while businesses ____ to adopt green technologies.",
+  "blanks": [
+    {
+      "id": 1,
+      "options": [
+        "developing",
+        "finding",
+        "seeking",
+        "researching"
+      ],
+      "correctAnswer": "developing"
+    },
+    {
+      "id": 2,
+      "options": [
+        "combat",
+        "address",
+        "fight",
+        "tackle"
+      ],
+      "correctAnswer": "combat"
+    },
+    {
+      "id": 3,
+      "options": [
+        "advancing",
+        "growing",
+        "developing",
+        "progressing"
+      ],
+      "correctAnswer": "advancing"
+    },
+    {
+      "id": 4,
+      "options": [
+        "reduce",
+        "minimize",
+        "decrease",
+        "lower"
+      ],
+      "correctAnswer": "reduce"
+    },
+    {
+      "id": 5,
+      "options": [
+        "adopting",
+        "implementing",
+        "using",
+        "following"
+      ],
+      "correctAnswer": "adopting"
+    },
+    {
+      "id": 6,
+      "options": [
+        "reduce",
+        "minimize",
+        "lessen",
+        "decrease"
+      ],
+      "correctAnswer": "minimize"
+    },
+    {
+      "id": 7,
+      "options": [
+        "warn",
+        "suggest",
+        "indicate",
+        "state"
+      ],
+      "correctAnswer": "warn"
+    },
+    {
+      "id": 8,
+      "options": [
+        "needed",
+        "required",
+        "necessary",
+        "essential"
+      ],
+      "correctAnswer": "needed"
+    },
+    {
+      "id": 9,
+      "options": [
+        "implementing",
+        "creating",
+        "developing",
+        "establishing"
+      ],
+      "correctAnswer": "implementing"
+    },
+    {
+      "id": 10,
+      "options": [
+        "rush",
+        "hurry",
+        "race",
+        "scramble"
+      ],
+      "correctAnswer": "rush"
+    }
+  ],
+  "difficulty": "medium",
+  "category": "environmental_science",
+  "points": 10
+},
+{
+  "_id": "6751489d0b6463b0702033fd",
+  "question_id": 10,
+  "type": "fill_in_the_blanks",
+  "title": "Reading 6 - Digital Education Revolution",
+  "question_text": "Educational institutions are ____ to digital learning platforms to ____ modern teaching needs. Teachers are ____ new technologies to ____ student engagement. Online resources are ____ traditional textbooks, while interactive tools ____ personalized learning experiences. Students are ____ to become more independent learners, as education ____ beyond classroom walls. Schools must ____ their infrastructure and ____ teacher training.",
+  "blanks": [
+    {
+      "id": 1,
+      "options": [
+        "transitioning",
+        "moving",
+        "shifting",
+        "changing"
+      ],
+      "correctAnswer": "transitioning"
+    },
+    {
+      "id": 2,
+      "options": [
+        "meet",
+        "address",
+        "satisfy",
+        "fulfill"
+      ],
+      "correctAnswer": "meet"
+    },
+    {
+      "id": 3,
+      "options": [
+        "adopting",
+        "using",
+        "implementing",
+        "embracing"
+      ],
+      "correctAnswer": "adopting"
+    },
+    {
+      "id": 4,
+      "options": [
+        "increase",
+        "improve",
+        "enhance",
+        "boost"
+      ],
+      "correctAnswer": "enhance"
+    },
+    {
+      "id": 5,
+      "options": [
+        "replacing",
+        "supplementing",
+        "supporting",
+        "complementing"
+      ],
+      "correctAnswer": "supplementing"
+    },
+    {
+      "id": 6,
+      "options": [
+        "enable",
+        "allow",
+        "facilitate",
+        "promote"
+      ],
+      "correctAnswer": "enable"
+    },
+    {
+      "id": 7,
+      "options": [
+        "encouraged",
+        "motivated",
+        "pushed",
+        "urged"
+      ],
+      "correctAnswer": "encouraged"
+    },
+    {
+      "id": 8,
+      "options": [
+        "extends",
+        "moves",
+        "expands",
+        "grows"
+      ],
+      "correctAnswer": "extends"
+    },
+    {
+      "id": 9,
+      "options": [
+        "upgrade",
+        "improve",
+        "enhance",
+        "modernize"
+      ],
+      "correctAnswer": "upgrade"
+    },
+    {
+      "id": 10,
+      "options": [
+        "prioritize",
+        "emphasize",
+        "focus on",
+        "strengthen"
+      ],
+      "correctAnswer": "prioritize"
+    }
+  ],
+  "difficulty": "medium",
+  "category": "education_technology",
+  "points": 10
+}]
